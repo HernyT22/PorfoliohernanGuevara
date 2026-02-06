@@ -1,0 +1,280 @@
+/* =====================
+   VARIABLES (PALETA)
+===================== */
+:root {
+  /* Fondos */
+  --bg-main: #f6f8fb;
+  --bg-card: #ffffff;
+
+  /* Texto */
+  --text-main: #0f172a;        /* azul oscuro */
+  --text-secondary: #475569;   /* gris azulado */
+
+  /* Marca / acento */
+  --primary: #1e293b;          /* azul gris oscuro */
+  --accent: #2563eb;           /* azul profesional */
+  --accent-soft: #e0e7ff;
+
+  /* Bordes */
+  --border-soft: #e5e7eb;
+
+  /* Especial */
+  --whatsapp: #25d366;
+}
+
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* =====================
+   TYPOGRAPHY
+===================== */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.9rem;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+
+
+p {
+  margin-bottom: 15px;
+}
+
+/* =====================
+   LAYOUT
+===================== */
+section {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--text-main)
+  );
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+}
+
+.hero-role {
+  font-size: 1.3rem;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+.hero-skills {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.hero-actions {
+  margin-top: 35px;
+}
+
+/* =====================
+   BUTTON SYSTEM
+===================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 28px;
+  border-radius: 50px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: none;
+  transition: all 0.25s ease;
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Secondary */
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about p {
+  max-width: 760px;
+}
+
+/* =====================
+   SKILLS
+===================== */
+.skills ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.skills li {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 16px;
+
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+/* =====================
+   PROJECTS
+===================== */
+.projects {
+  display: grid;
+  gap: 35px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.project-actions {
+  margin-top: 10px;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contact {
+  text-align: center;
+}
+
+.links {
+  margin-top: 28px;
+}
+
+.links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--border-soft);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-role {
+    font-size: 1.1rem;
+  }
+
+  .hero-actions .btn {
+    margin: 8px 6px;
+  }
+}
